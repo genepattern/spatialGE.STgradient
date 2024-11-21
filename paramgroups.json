@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Basic Options",
+    "description": "Basic parameters used to run the STgradient method",
+    "hidden": false,
+    "parameters": [
+      "input.file",
+      "num.variable.genes",
+      "robust.regression",
+      "ignore.outliers",
+      "correlation.limit",
+      "min.neighbors",
+      "distance.summary"
+    ]
+  },
+  {
+    "name": "Advanced Options",
+    "description": "Parameters that require knowledge of sample names or internal data structures",
+    "hidden": true,
+    "parameters": [
+      "samples",
+      "annotation.to.test",
+      "reference.cluster",
+      "exclude.clusters"
+    ]
+  }
+]
