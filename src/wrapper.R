@@ -28,16 +28,16 @@ data <- readRDS(args$file)
 # Process arguments
 robust_regression <- tolower(args$robust) == "true"
 ignore_outliers <- tolower(args$ignore) == "true"
-correlation_limit <- if (args$limit != "") args$limit else NULL
+correlation_limit <- if (!is.na(args$limit)) args$limit else NULL
 samples <- if (args$samples != "") unlist(strsplit(args$samples, ",")) else NULL
 exclude_clusters <- if (args$exclude != "") unlist(strsplit(args$exclude, ",")) else NULL
 annotations = if (args$annotation != "") list(args$annotation) else NULL
 reference_cluster = if (args$cluster != "") list(args$cluster) else NULL
 
 # If all annotations, assemble the list
-if (is.null(annotations) {
+if (is.null(annotations)) {
     annotations <- c()
-    for (t in data@spatial_meta[]) annotations <- unique(c(annotations, unlist(colnames(t)))
+    for (t in data@spatial_meta[]) annotations <- unique(c(annotations, unlist(colnames(t))))
     annotations <- annotations[!annotations %in% c('libname', 'xpos', 'ypos', 'total_counts', 'total_genes')]
     # colnames(x@spatial_meta[[i]])
 }
@@ -49,6 +49,7 @@ for (a in annotations) {
 
     for (c in reference_cluster) {
         print(paste('Beginning loop for reference cluster: ', c))
+
         mod_stlist <- STgradient(
             x = data,
             samples = samples,
@@ -73,4 +74,6 @@ for (a in annotations) {
             write.csv(mod_stlist[[i]], file=file_path, row.names=F, quote=F)
         })
     }
+
+    saveRDS(data, file='gradient_stlist.rds')
 }
