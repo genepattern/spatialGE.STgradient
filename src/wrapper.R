@@ -13,13 +13,13 @@ parser <- add_option(parser, c("-f", "--file"), type = 'character', help = "inpu
 parser <- add_option(parser, c("-v", "--ngenes"),  type = 'integer', help = "num.variable.genes")
 parser <- add_option(parser, c("-r", "--robust"),  type = "character", help = "robust.regression")
 parser <- add_option(parser, c("-i", "--ignore"),  type = "character", help = "ignore.outliers")
-parser <- add_option(parser, c("-l", "--limit"),  type = "double", help = "correlation.limit")
+parser <- add_option(parser, c("-l", "--limit"),  type = "double", help = "correlation.limit", default = NA)
 parser <- add_option(parser, c("-n", "--neighbors"),  type = 'integer', help = "min.neighbors")
 parser <- add_option(parser, c("-d", "--distance"),  type = "character", help = "distance.summary")
-parser <- add_option(parser, c("-s", "--samples"),  type = "character", help = "samples")
-parser <- add_option(parser, c("-a", "--annotation"),  type = "character", help = "annotation.to.test")
-parser <- add_option(parser, c("-c", "--cluster"),  type = "character", help = "reference.cluster")
-parser <- add_option(parser, c("-e", "--exclude"),  type = "character", help = "exclude.clusters")
+parser <- add_option(parser, c("-s", "--samples"),  type = "character", help = "samples", default = "")
+parser <- add_option(parser, c("-a", "--annotation"),  type = "character", help = "annotation.to.test", default = "")
+parser <- add_option(parser, c("-c", "--cluster"),  type = "character", help = "reference.cluster", default = "")
+parser <- add_option(parser, c("-e", "--exclude"),  type = "character", help = "exclude.clusters", default = "")
 args <- parse_args(parser)
 
 # Load the RDS file
