@@ -41,7 +41,7 @@ p2_name=samples
 p2_numValues=0..1
 p2_optional=on
 p2_prefix=
-p2_prefix_when_specified=-s
+p2_prefix_when_specified=-s 
 p2_type=java.lang.String
 p2_value=
 
@@ -69,7 +69,7 @@ p4_name=annotation.to.test
 p4_numValues=0..1
 p4_optional=on
 p4_prefix=
-p4_prefix_when_specified=-a
+p4_prefix_when_specified=-a 
 p4_type=java.lang.String
 p4_value=
 
@@ -83,7 +83,7 @@ p5_name=reference.cluster
 p5_numValues=0..1
 p5_optional=on
 p5_prefix=
-p5_prefix_when_specified=-c
+p5_prefix_when_specified=-c 
 p5_type=java.lang.String
 p5_value=
 
@@ -97,7 +97,7 @@ p6_name=exclude.clusters
 p6_numValues=0..1
 p6_optional=on
 p6_prefix=
-p6_prefix_when_specified=-e
+p6_prefix_when_specified=-e 
 p6_type=java.lang.String
 p6_value=
 
@@ -139,7 +139,7 @@ p9_name=correlation.limit
 p9_numValues=0..1
 p9_optional=on
 p9_prefix=
-p9_prefix_when_specified=-l
+p9_prefix_when_specified=-l 
 p9_type=java.lang.Float
 p9_value=
 
@@ -176,4 +176,4 @@ quality=development
 taskDoc=
 taskType=spatial transcriptomics
 userid=tabor
-version=Initial development release
+version=Fixing prerelease
