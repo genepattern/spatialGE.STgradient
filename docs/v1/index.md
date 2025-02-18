@@ -8,7 +8,7 @@ reference tissue niche, lower expression as farther from reference tissue niche)
 
 - **Authors:** Thorin Tabor; UCSD - Mesirov Lab
 - **Categories:** spatial transcriptomics
-- **Source repository:** [spatialGE.Preprocessing on GitHub](https://github.com/genepattern/spatialGE.STgradient)
+- **Source repository:** [spatialGE.STgradient on GitHub](https://github.com/genepattern/spatialGE.STgradient)
 - **Contact**: [GenePattern Help Forum](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!forum/genepattern-help)
 - **Algorithm Version**: [spatialGE 1.2.0](https://fridleylab.github.io/spatialGE/)
 
